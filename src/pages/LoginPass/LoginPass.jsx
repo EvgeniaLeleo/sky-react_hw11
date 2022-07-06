@@ -25,8 +25,6 @@ const LoginPass = () => {
 
   const inputEmail = useRef(null);
   const inputPassword = useRef(null);
-  const inputEmailErrorText = useRef(null);
-  const inputPasswordErrorText = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,14 +32,13 @@ const LoginPass = () => {
     if (!isValidEmail(inputEmail.current.value)) {
       inputEmail.current.style.background = '#ffcedc';
       inputEmail.current.focus();
-      inputEmailErrorText.current.innerText = 'Введите корректный e-mail';
+      fields.email.errorText = 'Введите корректный e-mail';
     }
 
     if (inputPassword.current.value.trim().length < 6) {
       inputPassword.current.style.background = '#ffcedc';
       inputPassword.current.focus();
-      inputPasswordErrorText.current.innerText =
-        'Пароль должен быть не менее 6 символов';
+      fields.password.errorText = 'Пароль должен быть не менее 6 символов';
     }
   };
 
@@ -65,9 +62,7 @@ const LoginPass = () => {
             onKeyDown={onKeyDown}
             ref={inputEmail}
           />
-          <div className="errorText" ref={inputEmailErrorText}>
-            {fields.email.errorText}
-          </div>
+          <div className="errorText">{fields.email.errorText}</div>
         </div>
 
         <div className="form-field">
@@ -86,9 +81,7 @@ const LoginPass = () => {
             onKeyDown={onKeyDown}
             ref={inputPassword}
           />
-          <div className="errorText" ref={inputPasswordErrorText}>
-            {fields.password.errorText}
-          </div>
+          <div className="errorText">{fields.password.errorText}</div>
         </div>
 
         <button className="button-submit" type="submit">
