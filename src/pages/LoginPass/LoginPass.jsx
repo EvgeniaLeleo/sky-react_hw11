@@ -1,10 +1,10 @@
-import useForm from './userHook';
+import useForm from '../../components/userHook';
 import { React, useRef } from 'react';
-import { isValidEmail } from './utils';
+import { isValidEmail } from '../../components/utils';
 
 import './LoginPass.css';
 
-const classNames = require('classnames');
+export const classNames = require('classnames');
 
 const LoginPass = () => {
   const form = useForm({

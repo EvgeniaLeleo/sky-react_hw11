@@ -16,9 +16,15 @@
   padding: 2px 5px;
   margin: 0 10px;
 
-  border: 1px solid #6200ee;
+  border: 1px solid #420e8c;
   border-radius: 5px;
   outline: transparent;
+
+  min-width: 220px;
+}
+
+.form-input::placeholder {
+  color: #999;
 }
 
 .error {
@@ -34,14 +40,14 @@
   font-weight: 600;
   font-size: inherit;
   line-height: 0;
-  color: #6200ee;
+  color: #420e8c;
   text-transform: uppercase;
   text-align: center;
 
   padding: 20px 20px;
   margin-top: 30px;
 
-  border: 1px solid #6200ee;
+  border: 1px solid #420e8c;
   border-radius: 5px;
   outline: transparent;
 

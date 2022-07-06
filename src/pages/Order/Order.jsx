@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import booksStub from './booksStub';
+import booksStub from '../../components/booksStub';
 import TotalPrice from './TotalPrice';
 import TotalQuantity from './TotalQuantity';
 import OrderDetail from './OrderDetail';
