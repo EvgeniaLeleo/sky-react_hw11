@@ -7,16 +7,16 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <NavLink className="navigation__link" to="/">
-        Home
+        <span>Home</span>
       </NavLink>
       <NavLink className="navigation__link" to="/about">
-        About
+        <span>About</span>
       </NavLink>
       <NavLink className="navigation__link" to="/login">
-        Login
+        <span>Login</span>
       </NavLink>
       <NavLink className="navigation__link" to="/order">
-        Order
+        <span>Order</span>
       </NavLink>
     </nav>
   );
