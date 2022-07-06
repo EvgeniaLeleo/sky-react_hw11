@@ -1,14 +1,12 @@
-// import { Routes, Route } from 'react-router-dom';
-// BrowserRouter as Router,
-
-// import './App.css';
+import Navigation from '../../components/Navigation/Navigation';
 
 const Error = () => {
   return (
     <div>
-      <nav></nav>
+      <Navigation></Navigation>
       <main>
-        <h1>Такой страницы нет</h1>
+        <h1>Page 404</h1>
+        <h2>Такой страницы здесь нет</h2>
       </main>
     </div>
   );

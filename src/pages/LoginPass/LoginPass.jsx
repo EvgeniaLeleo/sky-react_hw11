@@ -1,6 +1,7 @@
 import useForm from '../../components/userHook';
 import { React, useRef } from 'react';
 import { isValidEmail } from '../../components/utils';
+import Navigation from '../../components/Navigation/Navigation';
 
 import './LoginPass.css';
 
@@ -45,52 +46,56 @@ const LoginPass = () => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <div className="form-field">
-        <label className="form-label" htmlFor="login">
-          E-mail
-        </label>
-        <input
-          className={loginClasses}
-          id="email"
-          name="email"
-          placeholder="Введите e-mail"
-          value={fields.email.value}
-          onBlur={onBlur}
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          ref={inputEmail}
-        />
-        <div className="errorText" ref={inputEmailErrorText}>
-          {fields.email.errorText}
+    <div>
+      <Navigation></Navigation>
+      <h1>Авторизация</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="form-field">
+          <label className="form-label" htmlFor="login">
+            E-mail
+          </label>
+          <input
+            className={loginClasses}
+            id="email"
+            name="email"
+            placeholder="Введите e-mail"
+            value={fields.email.value}
+            onBlur={onBlur}
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            ref={inputEmail}
+          />
+          <div className="errorText" ref={inputEmailErrorText}>
+            {fields.email.errorText}
+          </div>
         </div>
-      </div>
 
-      <div className="form-field">
-        <label className="form-label" htmlFor="password">
-          Password
-        </label>
-        <input
-          className={passwordClasses}
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Пароль не менее 6 символов"
-          value={fields.password.value}
-          onBlur={onBlur}
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          ref={inputPassword}
-        />
-        <div className="errorText" ref={inputPasswordErrorText}>
-          {fields.password.errorText}
+        <div className="form-field">
+          <label className="form-label" htmlFor="password">
+            Password
+          </label>
+          <input
+            className={passwordClasses}
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Пароль не менее 6 символов"
+            value={fields.password.value}
+            onBlur={onBlur}
+            onChange={onChange}
+            onKeyDown={onKeyDown}
+            ref={inputPassword}
+          />
+          <div className="errorText" ref={inputPasswordErrorText}>
+            {fields.password.errorText}
+          </div>
         </div>
-      </div>
 
-      <button className="button-submit" type="submit">
-        Отправить
-      </button>
-    </form>
+        <button className="button-submit" type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
   );
 };
 

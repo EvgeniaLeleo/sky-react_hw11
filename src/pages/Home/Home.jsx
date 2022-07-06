@@ -1,12 +1,9 @@
-// import { Routes, Route } from 'react-router-dom';
-// BrowserRouter as Router,
-
-// import './App.css';
+import Navigation from '../../components/Navigation/Navigation';
 
 const Home = () => {
   return (
     <div>
-      <nav></nav>
+      <Navigation></Navigation>
       <main>
         <h1>Главная страница</h1>
       </main>

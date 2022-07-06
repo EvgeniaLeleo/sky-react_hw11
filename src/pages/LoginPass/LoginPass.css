@@ -1,3 +1,7 @@
+.form {
+  margin: 20px 30px;
+}
+
 .form-field {
   display: flex;
   align-items: center;

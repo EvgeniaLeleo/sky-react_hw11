@@ -3,6 +3,8 @@ import booksStub from '../../components/booksStub';
 import TotalPrice from './TotalPrice';
 import TotalQuantity from './TotalQuantity';
 import OrderDetail from './OrderDetail';
+import Navigation from '../../components/Navigation/Navigation';
+import './Order.css';
 
 const Order = () => {
   const [books, setBooks] = useState(booksStub());
@@ -15,6 +17,8 @@ const Order = () => {
 
   return (
     <div className="order">
+      <Navigation></Navigation>
+      <h1>Данные о заказе</h1>
       <div className="cardsView">
         {books.map((book, i) => (
           <OrderDetail

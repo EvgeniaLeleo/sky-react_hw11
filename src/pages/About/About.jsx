@@ -1,18 +1,16 @@
-// import { Routes, Route } from 'react-router-dom';
-// BrowserRouter as Router,
-
-// import './App.css';
+import './About.css';
+import Navigation from '../../components/Navigation/Navigation';
 
 const About = () => {
   return (
-    <div>
-      <nav></nav>
-      <main>
+    <div className="about">
+      <Navigation></Navigation>
+      <main className="about__main">
         <h1>О магазине</h1>
-        <h2>
+        <h3>
           Этот магазин был придуман в Тайланде и теперь страдает из-за
           формулировок домашних заданий
-        </h2>
+        </h3>
       </main>
     </div>
   );
